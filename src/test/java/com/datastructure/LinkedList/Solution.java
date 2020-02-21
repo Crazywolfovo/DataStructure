@@ -5,7 +5,7 @@ package com.datastructure.LinkedList;
 
 class Solution {
 
-    public ListNode removeElements(ListNode head, int val) {
+    ListNode removeElements(ListNode head, int val) {
 
         while (head != null && head.val == val) {
             ListNode delNode = head;
@@ -14,7 +14,7 @@ class Solution {
         }
 
         if (head == null)
-            return head;
+            return null;
 
         ListNode prev = head;
         while (prev.next != null) {

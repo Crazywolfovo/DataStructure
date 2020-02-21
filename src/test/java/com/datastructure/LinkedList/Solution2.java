@@ -5,13 +5,13 @@ package com.datastructure.LinkedList;
 
 class Solution2 {
 
-    public ListNode removeElements(ListNode head, int val) {
+    ListNode removeElements(ListNode head, int val) {
 
         while (head != null && head.val == val)
             head = head.next;
 
         if (head == null)
-            return head;
+            return null;
 
         ListNode prev = head;
         while (prev.next != null) {

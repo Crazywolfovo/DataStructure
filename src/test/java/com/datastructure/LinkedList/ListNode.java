@@ -10,13 +10,13 @@ class ListNode {
         val = x;
     }
 
-    public ListNode(int[] arr) {
+    ListNode(int[] arr) {
         if (null == arr || 0 == arr.length)
             throw new IllegalArgumentException("Array cannot be empty");
         this.val = arr[0];
         ListNode current = this;
-        for (int i = 0; i < arr.length; i++) {
-            current.next = new ListNode(arr[i]);
+        for (int anArr : arr) {
+            current.next = new ListNode(anArr);
             current = current.next;
         }
     }

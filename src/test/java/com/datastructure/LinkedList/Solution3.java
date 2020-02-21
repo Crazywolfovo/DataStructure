@@ -5,7 +5,7 @@ package com.datastructure.LinkedList;
 
 class Solution3 {
 
-    public ListNode removeElements(ListNode head, int val) {
+    ListNode removeElements(ListNode head, int val) {
 
         ListNode dummyHead = new ListNode(-1);
         dummyHead.next = head;
