@@ -1,7 +1,5 @@
 package com.datastructure.Queue;
 
-import java.util.Arrays;
-
 public class LoopQueue<E> implements Queue<E> {
 
     private E[] data;
@@ -36,7 +34,7 @@ public class LoopQueue<E> implements Queue<E> {
 
     @Override
     public E dequeue() {
-        if (isEmpty()) throw new IllegalArgumentException("Can not dequeue from a empty queue ~");
+        if (isEmpty()) throw new IllegalArgumentException("Can not dequeue from an empty queue ~");
         E ret = data[front];
         data[front] = null;
         front = (front + 1) % data.length;
@@ -47,7 +45,7 @@ public class LoopQueue<E> implements Queue<E> {
 
     @Override
     public E getFront() {
-        if (isEmpty()) throw new IllegalArgumentException("Can not dequeue from a empty queue ~");
+        if (isEmpty()) throw new IllegalArgumentException("Can not dequeue from an empty queue ~");
         return data[front];
     }
 
@@ -85,7 +83,7 @@ public class LoopQueue<E> implements Queue<E> {
             if ((i + 1) % data.length != tail) str.append(", ");
         }
         str.append("] Tail");
-        return "Queue{" +
+        return "LoopQueue{" +
                 "data=" + str +
                 ", size=" + size +
                 ", capacity=" + getCapacity() +

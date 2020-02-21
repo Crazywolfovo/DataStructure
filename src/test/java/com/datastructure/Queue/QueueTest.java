@@ -4,22 +4,17 @@ import org.junit.Test;
 
 import java.util.Random;
 
-import static org.junit.Assert.assertEquals;
-
 public class QueueTest {
-    private String doTest(Queue<Integer> queue) {
-        StringBuilder str = new StringBuilder();
+
+    private void doTest(Queue<Integer> queue) {
         for (int i = 0; i < 10; i++) {
             queue.enqueue(i);
             System.out.println(queue);
-            str.append(queue.toString());
             if (i % 3 == 2) {
                 queue.dequeue();
                 System.out.println(queue);
-                str.append(queue.toString());
             }
         }
-        return str.toString();
     }
 
     @Test
@@ -35,10 +30,9 @@ public class QueueTest {
     }
 
     @Test
-    public void testQueal() {
-        ArrayQueue<Integer> arrayQueue = new ArrayQueue<>();
-        LoopQueue<Integer> loopQueue = new LoopQueue<>();
-        assertEquals(doTest(arrayQueue), doTest(loopQueue));
+    public void testLinkedListQueue() {
+        LinkedListQueue<Integer> queue = new LinkedListQueue<>();
+        doTest(queue);
     }
 
     private double doTestTime(Queue<Integer> queue, int opCount) {
@@ -59,10 +53,13 @@ public class QueueTest {
         int opCount = 10_0000;
         ArrayQueue<Integer> arrayQueue = new ArrayQueue<>();
         LoopQueue<Integer> loopQueue = new LoopQueue<>();
+        LinkedListQueue<Integer> linkedListQueue = new LinkedListQueue<>();
         double arrayQueueTime = doTestTime(arrayQueue, opCount);
         System.out.println("ArrayQueue time = " + arrayQueueTime + "s");
         double loopQueueTime = doTestTime(loopQueue, opCount);
         System.out.println("LoopQueue time = " + loopQueueTime + "s");
+        double linkedListQueueTime = doTestTime(linkedListQueue, opCount);
+        System.out.println("LinkedListQueue time = " + linkedListQueueTime + "s");
     }
 
 }

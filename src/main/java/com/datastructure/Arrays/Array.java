@@ -1,7 +1,5 @@
 package com.datastructure.Arrays;
 
-import java.util.Arrays;
-
 public class Array<E> {
     /**
      * 数据容器

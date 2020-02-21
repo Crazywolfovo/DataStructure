@@ -51,7 +51,7 @@ public class ArrayQueue<E> implements Queue<E> {
             if (i != array.getSize() - 1) str.append(", ");
         }
         str.append("] Tail");
-        return "Queue{" +
+        return "ArrayQueue{" +
                 "data=" + str +
                 ", size=" + getSize() +
                 ", capacity=" + getCapacity() +
