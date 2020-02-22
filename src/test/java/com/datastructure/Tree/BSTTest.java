@@ -17,9 +17,16 @@ public class BSTTest {
         //  / \    \   //
         // 2  4     8  //
         /////////////////
+
         bst.preOrder();
 
         System.out.println();
-        System.out.println(bst);
+        /* System.out.println(bst);*/
+
+        bst.inOrder();
+
+        System.out.println();
+
+        bst.postOrder();
     }
 }

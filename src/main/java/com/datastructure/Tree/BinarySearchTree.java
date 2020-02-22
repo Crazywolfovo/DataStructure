@@ -1,5 +1,10 @@
 package com.datastructure.Tree;
 
+/**
+ * 二分搜索树
+ *
+ * @param <E> 二分搜索树的元素
+ */
 public class BinarySearchTree<E extends Comparable<E>> {
     private class Node {
         public E e;
@@ -13,12 +18,12 @@ public class BinarySearchTree<E extends Comparable<E>> {
     }
 
     /**
-     * 树的根节点
+     * 二分搜索树的根节点
      */
     private Node root;
 
     /**
-     * 树已存储的数据量
+     * 二分搜索树已存储的数据量
      */
     private int size;
 
@@ -31,7 +36,7 @@ public class BinarySearchTree<E extends Comparable<E>> {
     }
 
     /**
-     * 获取树已存储的数据量
+     * 获取二分搜索树已存储的数据量
      *
      * @return 数据量
      */
@@ -40,7 +45,7 @@ public class BinarySearchTree<E extends Comparable<E>> {
     }
 
     /**
-     * 判断树是否为空
+     * 判断二分搜索树是否为空
      *
      * @return boolean
      */
@@ -87,7 +92,7 @@ public class BinarySearchTree<E extends Comparable<E>> {
     }
 
     /**
-     * 查看以node为根的树中是否包含元素e
+     * 查看二分搜索树中是否包含元素e
      *
      * @param e 元素
      * @return boolean
@@ -97,7 +102,7 @@ public class BinarySearchTree<E extends Comparable<E>> {
     }
 
     /**
-     * 查看以node为根的树中是否包含元素e
+     * 查看以node为根的二分搜索树中是否包含元素e
      *
      * @param e    元素
      * @param node 根节点
@@ -119,14 +124,15 @@ public class BinarySearchTree<E extends Comparable<E>> {
     }
 
     /**
-     * 树的前序遍历
+     * 二分搜索树的前序遍历
      */
     public void preOrder() {
         preOrder(root);
     }
 
     /**
-     * 已node为根节点的树的前序遍历
+     * 已node为根节点的二分搜索树的前序遍历
+     * 根 -> 左子树 -> 右子树
      *
      * @param node 根节点
      */
@@ -138,6 +144,52 @@ public class BinarySearchTree<E extends Comparable<E>> {
         }
     }
 
+    /**
+     * 二分搜索树的中序遍历
+     * 二分搜索树元素的排序结果
+     */
+    public void inOrder() {
+        inOrder(root);
+    }
+
+    /**
+     * 已node为根节点的二分搜索树的中序遍历
+     * 左子树 -> 根 -> 右子树
+     * 用于二分搜索树内元素的排序
+     *
+     * @param node 根
+     */
+    private void inOrder(Node node) {
+        if (null != node) {
+            inOrder(node.left);
+            System.out.println(node.e);
+            inOrder(node.right);
+        }
+
+    }
+
+    /**
+     * 二分搜索树的后续遍历
+     */
+    public void postOrder() {
+        postOrder(root);
+    }
+
+    /**
+     * 已node为根节点的二分搜索树的后序遍历
+     * 左子树 -> 右子树 -> 根
+     * 用于释放二分搜索树的内存
+     *
+     * @param node 根
+     */
+    private void postOrder(Node node) {
+        if (null != node) {
+            postOrder(node.left);
+            postOrder(node.right);
+            System.out.println(node.e);
+        }
+    }
+
     @Override
     public String toString() {
         StringBuilder str = new StringBuilder();
@@ -146,7 +198,8 @@ public class BinarySearchTree<E extends Comparable<E>> {
     }
 
     /**
-     * 生成以node为根节点，深度为deep的树的描述字符串
+     * 生成以node为根节点，深度为deep的二分搜索树的描述字符串
+     * 生成以node为根节点，深度为deep的二分搜索树的描述字符串
      *
      * @param node  根节点
      * @param depth 深度
