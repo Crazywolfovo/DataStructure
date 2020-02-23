@@ -23,6 +23,7 @@ public class BstSet<E extends Comparable<E>> implements Set<E> {
 
     /**
      * O(depth)
+     * O(log n)
      *
      * @param e 元素
      */
@@ -33,6 +34,7 @@ public class BstSet<E extends Comparable<E>> implements Set<E> {
 
     /**
      * O(depth)
+     * O(log n)
      *
      * @param e 元素
      */
