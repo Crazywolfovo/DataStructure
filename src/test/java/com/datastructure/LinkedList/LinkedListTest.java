@@ -30,15 +30,15 @@ public class LinkedListTest {
         int[] nums = {1, 2, 6, 3, 4, 5, 6};
 
         ListNode head = new ListNode(nums);
-        ListNode res = (new Solution()).removeElements(head,1);
+        ListNode res = (new Solution()).removeElements(head, 1);
         System.out.println(res);
 
         ListNode head2 = new ListNode(nums);
-        ListNode res2 = (new Solution2()).removeElements(head2,1);
+        ListNode res2 = (new Solution2()).removeElements(head2, 1);
         System.out.println(res2);
 
         ListNode head3 = new ListNode(nums);
-        ListNode res3 = (new Solution3()).removeElements(head3,1);
+        ListNode res3 = (new Solution3()).removeElements(head3, 1);
         System.out.println(res3);
 
         ListNode head4 = new ListNode(nums);
