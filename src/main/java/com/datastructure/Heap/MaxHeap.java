@@ -115,7 +115,8 @@ public class MaxHeap<E extends Comparable<E>> {
     }
 
     /**
-     *  将一个数组格式化成堆
+     * 将一个数组格式化成堆
+     *
      * @param arr
      */
     private void heapfiy(E[] arr) {

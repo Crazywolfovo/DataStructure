@@ -1,7 +1,7 @@
 package com.datastructure.Map;
 
 public class BstMap<K extends Comparable<K>, V> implements Map<K, V> {
-    
+
     private class Node {
         public K key;
         public V value;
