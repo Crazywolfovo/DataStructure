@@ -53,12 +53,26 @@ public class Trie {
         Node current = root;
         for (int i = 0; i < string.length(); i++) {
             char c = string.charAt(i);
-            if (null == current.next.get(c)) {
-                return false;
-            }
+            if (null == current.next.get(c)) return false;
             current = current.next.get(c);
         }
         return current.isWord;
+    }
+
+    /**
+     * 是否有单词以prefix为前缀
+     *
+     * @param prefix 前缀
+     * @return boolean
+     */
+    public boolean isPrefix(String prefix) {
+        Node current = root;
+        for (int i = 0; i < prefix.length(); i++) {
+            char c = prefix.charAt(i);
+            if (null == current.next.get(c)) return false;
+            current = current.next.get(c);
+        }
+        return true;
     }
 }
 
