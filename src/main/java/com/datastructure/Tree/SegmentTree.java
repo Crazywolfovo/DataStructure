@@ -101,6 +101,43 @@ public class SegmentTree<E> {
         }
     }
 
+    /**
+     * 更新线段树的某个所索引所对应的元素
+     *
+     * @param e     元素
+     * @param index 索引
+     */
+    public void set(E e, int index) {
+        if (index < 0 || index >= data.length)
+            throw new IllegalArgumentException("index is illegal ~ ");
+        data[index] = e;
+        set(0, 0, data.length - 1, index, e);
+    }
+
+    /**
+     * O(longn)，后续遍历的思想
+     *
+     * @param rootIndex
+     * @param l
+     * @param r
+     * @param index
+     * @param e
+     */
+    private void set(int rootIndex, int l, int r, int index, E e) {
+        if (l == r) {
+            tree[rootIndex] = e;
+            return;
+        }
+        int mid = l + (r - l) / 2;
+        int leftTreeIndex = leftChild(rootIndex);
+        int rightTreeIndex = rightChild(rootIndex);
+        if (index >= mid + 1)
+            set(rightTreeIndex, mid + 1, r, index, e);
+        else
+            set(leftTreeIndex, l, mid, index, e);
+        tree[rootIndex] = merger.apply(tree[leftTreeIndex], tree[rightTreeIndex]);
+    }
+
     public int getSize() {
         return data.length;
     }
