@@ -7,6 +7,7 @@ public interface UnionFind {
 
     /**
      * i两个元素是否能够相连
+     * Quick Find :find(p) == find(q) O(1)
      *
      * @param p
      * @param q
