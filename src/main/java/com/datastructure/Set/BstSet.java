@@ -1,12 +1,12 @@
 package com.datastructure.Set;
 
-import com.datastructure.Tree.BinarySearchTree;
+import com.datastructure.Tree.BST;
 
 public class BstSet<E extends Comparable<E>> implements Set<E> {
-    private BinarySearchTree<E> bst;
+    private BST<E> bst;
 
     public BstSet() {
-        bst = new BinarySearchTree<>();
+        bst = new BST<>();
     }
 
     /**

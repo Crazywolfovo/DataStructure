@@ -8,7 +8,7 @@ import java.util.Random;
 public class BSTTest {
     @Test
     public void testBst() {
-        BinarySearchTree<Integer> bst = new BinarySearchTree<>();
+        BST<Integer> bst = new BST<>();
         int[] nums = {5, 3, 6, 8, 4, 2};
         for (int num : nums) {
             bst.add(num);
@@ -45,7 +45,7 @@ public class BSTTest {
 
     @Test
     public void testBstRemoveMin() {
-        BinarySearchTree<Integer> bst = new BinarySearchTree<>();
+        BST<Integer> bst = new BST<>();
         int n = 1000;
         Random random = new Random();
         for (int i = 0; i < n; i++) {
@@ -67,7 +67,7 @@ public class BSTTest {
 
     @Test
     public void testBstRemoveMax() {
-        BinarySearchTree<Integer> bst = new BinarySearchTree<>();
+        BST<Integer> bst = new BST<>();
         int n = 1000;
         Random random = new Random();
         for (int i = 0; i < n; i++) {

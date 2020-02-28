@@ -1,12 +1,14 @@
 package com.datastructure.Tree;
 
+import java.util.function.BinaryOperator;
+
 public class SegmentTree<E> {
     private E[] data;
     private E[] tree;
-    private Merger<E> merger;
+    private BinaryOperator<E> merger;
 
     @SuppressWarnings("unchecked")
-    public SegmentTree(E[] arr, Merger<E> merger) {
+    public SegmentTree(E[] arr, BinaryOperator<E> merger) {
         this.merger = merger;
         data = (E[]) new Object[arr.length];
         System.arraycopy(arr, 0, data, 0, arr.length);

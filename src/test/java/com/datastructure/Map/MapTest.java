@@ -27,6 +27,20 @@ public class MapTest {
             System.out.println("Total different words: " + map.getSize());
             System.out.println("Frequency of PRIDE: " + map.get("pride"));
             System.out.println("Frequency of PREJUDICE: " + map.get("prejudice"));
+
+            if (map instanceof AVLTree) {
+                System.out.println("is BST ? " + ((AVLTree<String, Integer>) map).isBST());
+                System.out.println("is Balance ? " + ((AVLTree<String, Integer>) map).isBalanced());
+            }
+
+            for (String word : words) {
+                map.remove(word);
+               /* if (map instanceof AVLTree
+                        && (!((AVLTree<String, Integer>) map).isBST() || !((AVLTree<String, Integer>) map).isBalanced())) {
+                    throw new RuntimeException("Error ~");
+                }*/
+            }
+
         }
 
         long endTime = System.nanoTime();
@@ -42,16 +56,16 @@ public class MapTest {
         double time1 = testMap(bstMap, filename);
         System.out.println("BST Map: " + time1 + " s");
 
-        System.out.println();
+         /*System.out.println();
 
         LinkedListMap<String, Integer> linkedListMap = new LinkedListMap<>();
         double time2 = testMap(linkedListMap, filename);
-        System.out.println("Linked List Map: " + time2 + " s");
+        System.out.println("Linked List Map: " + time2 + " s");*/
 
         System.out.println();
 
-        AVLTree<String, Integer> avlTree = new AVLTree<>();
-        double time3 = testMap(avlTree, filename);
-        System.out.println("AVL Tree: " + time3 + " s");
+        AVLTreeMap<String, Integer> avlTreeMap = new AVLTreeMap<>();
+        double time3 = testMap(avlTreeMap, filename);
+        System.out.println("AVL Tree Map: " + time3 + " s");
     }
 }

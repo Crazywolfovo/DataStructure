@@ -11,7 +11,7 @@ import java.util.Stack;
  *
  * @param <E> 二分搜索树的元素
  */
-public class BinarySearchTree<E extends Comparable<E>> {
+public class BST<E extends Comparable<E>> {
     private class Node {
         public E e;
         public Node left, right;
@@ -36,7 +36,7 @@ public class BinarySearchTree<E extends Comparable<E>> {
     /**
      * 构造函数
      */
-    public BinarySearchTree() {
+    public BST() {
         this.root = null;
         this.size = 0;
     }

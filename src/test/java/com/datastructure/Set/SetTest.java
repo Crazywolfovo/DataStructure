@@ -81,6 +81,12 @@ public class SetTest {
         double time2 = testSet(linkedListSet, filename);
         System.out.println("Linked List Set: " + time2 + " s");
 
+        System.out.println();
+
+        AVLTreeSet<String> avlTreeSet = new AVLTreeSet<>();
+        double time3 = testSet(avlTreeSet, filename);
+        System.out.println("AVL Tree Set: " + time3 + " s");
+
     }
 }
 
