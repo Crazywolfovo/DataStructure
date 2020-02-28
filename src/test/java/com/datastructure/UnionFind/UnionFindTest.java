@@ -4,8 +4,6 @@ import org.junit.Test;
 
 import java.util.Random;
 
-import static org.junit.Assert.assertTrue;
-
 
 public class UnionFindTest {
 
@@ -49,12 +47,18 @@ public class UnionFindTest {
         System.out.println("UnionFind1 : " + testUF(uf1, m) + " s");
 
         UnionFindII uf2 = new UnionFindII(size);
-        System.out.println("UnionFind2 : " + testUF(uf2, m) + " s");*/
+        System.out.println("UnionFind2 : " + testUF(uf2, m) + " s");
 
         UnionFindIII uf3 = new UnionFindIII(size);
         System.out.println("UnionFind3 : " + testUF(uf3, m) + " s");
 
         UnionFindIV uf4 = new UnionFindIV(size);
         System.out.println("UnionFind4 : " + testUF(uf4, m) + " s");
+
+        UnionFindIV uf5 = new UnionFindIV(size);
+        System.out.println("UnionFind5 : " + testUF(uf5, m) + " s");
+
+        UnionFindIV uf6 = new UnionFindIV(size);
+        System.out.println("UnionFind6 : " + testUF(uf6, m) + " s");*/
     }
 }

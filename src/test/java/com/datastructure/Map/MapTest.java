@@ -1,6 +1,7 @@
 package com.datastructure.Map;
 
 import com.datastructure.Set.FileOperation;
+import com.datastructure.Tree.AVLTree;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -46,5 +47,11 @@ public class MapTest {
         LinkedListMap<String, Integer> linkedListMap = new LinkedListMap<>();
         double time2 = testMap(linkedListMap, filename);
         System.out.println("Linked List Map: " + time2 + " s");
+
+        System.out.println();
+
+        AVLTree<String, Integer> avlTree = new AVLTree<>();
+        double time3 = testMap(avlTree, filename);
+        System.out.println("AVL Tree: " + time3 + " s");
     }
 }
