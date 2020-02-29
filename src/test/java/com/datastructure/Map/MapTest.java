@@ -2,6 +2,7 @@ package com.datastructure.Map;
 
 import com.datastructure.Set.FileOperation;
 import com.datastructure.Tree.AVLTree;
+import com.datastructure.Tree.RedBlackTree;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -27,20 +28,6 @@ public class MapTest {
             System.out.println("Total different words: " + map.getSize());
             System.out.println("Frequency of PRIDE: " + map.get("pride"));
             System.out.println("Frequency of PREJUDICE: " + map.get("prejudice"));
-
-            if (map instanceof AVLTree) {
-                System.out.println("is BST ? " + ((AVLTree<String, Integer>) map).isBST());
-                System.out.println("is Balance ? " + ((AVLTree<String, Integer>) map).isBalanced());
-            }
-
-            for (String word : words) {
-                map.remove(word);
-               /* if (map instanceof AVLTree
-                        && (!((AVLTree<String, Integer>) map).isBST() || !((AVLTree<String, Integer>) map).isBalanced())) {
-                    throw new RuntimeException("Error ~");
-                }*/
-            }
-
         }
 
         long endTime = System.nanoTime();
@@ -67,5 +54,11 @@ public class MapTest {
         AVLTreeMap<String, Integer> avlTreeMap = new AVLTreeMap<>();
         double time3 = testMap(avlTreeMap, filename);
         System.out.println("AVL Tree Map: " + time3 + " s");
+
+        System.out.println();
+
+        RedBlackTreeMap<String, Integer> redBlackTreeMap = new RedBlackTreeMap<>();
+        double time4 = testMap(redBlackTreeMap, filename);
+        System.out.println("RedBlack Tree Map: " + time4 + " s");
     }
 }
