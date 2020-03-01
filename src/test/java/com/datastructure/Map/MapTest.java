@@ -40,6 +40,7 @@ public class MapTest {
         BSTMap<String, Integer> bstMap = new BSTMap<>();
         double time1 = testMap(bstMap, filename);
         System.out.println("BST Map: " + time1 + " s");
+        System.out.println(bstMap);
 
          /*System.out.println();
 
@@ -61,7 +62,7 @@ public class MapTest {
 
         System.out.println();
 
-        HashMap<String, Integer> hashMap = new HashMap<>(131071);
+        HashMap<String, Integer> hashMap = new HashMap<>();
         double time5 = testMap(hashMap, filename);
         System.out.println("Hash Map: " + time5 + " s");
     }

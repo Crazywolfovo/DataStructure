@@ -3,11 +3,8 @@ package com.datastructure.Map;
 import com.datastructure.HashTable.HashTable;
 
 public class HashMap<K, V> implements Map<K, V> {
-    private HashTable<K, V> hashTable;
 
-    public HashMap(int m) {
-        this.hashTable = new HashTable<>(m);
-    }
+    private HashTable<K, V> hashTable;
 
     public HashMap() {
         this.hashTable = new HashTable<>();
