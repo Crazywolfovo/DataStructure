@@ -1,6 +1,6 @@
 package com.datastructure.Tree;
 
-import com.datastructure.Set.BstSet;
+import com.datastructure.Set.BSTSet;
 import com.datastructure.Set.FileOperation;
 import org.junit.Test;
 
@@ -17,7 +17,7 @@ public class TrieTest {
 
             long startTime = System.nanoTime();
 
-            BstSet<String> set = new BstSet<>();
+            BSTSet<String> set = new BSTSet<>();
             for (String word : words)
                 set.add(word);
 

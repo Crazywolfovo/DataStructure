@@ -1,8 +1,6 @@
 package com.datastructure.Map;
 
 import com.datastructure.Set.FileOperation;
-import com.datastructure.Tree.AVLTree;
-import com.datastructure.Tree.RedBlackTree;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -39,7 +37,7 @@ public class MapTest {
     public void testTime() {
         String filename = "pride-and-prejudice.txt";
 
-        BstMap<String, Integer> bstMap = new BstMap<>();
+        BSTMap<String, Integer> bstMap = new BSTMap<>();
         double time1 = testMap(bstMap, filename);
         System.out.println("BST Map: " + time1 + " s");
 
@@ -47,7 +45,7 @@ public class MapTest {
 
         LinkedListMap<String, Integer> linkedListMap = new LinkedListMap<>();
         double time2 = testMap(linkedListMap, filename);
-        System.out.println("Linked List Map: " + time2 + " s");*/
+        System.out.println("Linked List Map: " + time2 + " s");
 
         System.out.println();
 
@@ -59,6 +57,6 @@ public class MapTest {
 
         RedBlackTreeMap<String, Integer> redBlackTreeMap = new RedBlackTreeMap<>();
         double time4 = testMap(redBlackTreeMap, filename);
-        System.out.println("RedBlack Tree Map: " + time4 + " s");
+        System.out.println("RedBlack Tree Map: " + time4 + " s");*/
     }
 }

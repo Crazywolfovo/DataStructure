@@ -1,6 +1,6 @@
-package com.datastructure.Map;
+package com.datastructure.Tree;
 
-public class BstMap<K extends Comparable<K>, V> implements Map<K, V> {
+public class BST2<K extends Comparable<K>, V> {
 
     private class Node {
         public K key;
@@ -18,12 +18,11 @@ public class BstMap<K extends Comparable<K>, V> implements Map<K, V> {
     private Node root;
     private int size;
 
-    public BstMap() {
+    public BST2() {
         this.root = null;
         this.size = 0;
     }
 
-    @Override
     public void add(K key, V value) {
         root = add(key, value, root);
     }
@@ -54,7 +53,6 @@ public class BstMap<K extends Comparable<K>, V> implements Map<K, V> {
         return node;
     }
 
-    @Override
     public V remove(K key) {
         Node node = getNode(key, root);
         if (null != node) {
@@ -132,18 +130,15 @@ public class BstMap<K extends Comparable<K>, V> implements Map<K, V> {
     }
 
 
-    @Override
     public boolean contains(K key) {
         return null != getNode(key, root);
     }
 
-    @Override
     public V get(K key) {
         Node node = getNode(key, root);
         return null == node ? null : node.value;
     }
 
-    @Override
     public void set(K key, V newValue) {
         Node node = getNode(key, root);
         if (null == node)
@@ -151,12 +146,12 @@ public class BstMap<K extends Comparable<K>, V> implements Map<K, V> {
         node.value = newValue;
     }
 
-    @Override
+
     public int getSize() {
         return size;
     }
 
-    @Override
+
     public boolean isEmpty() {
         return 0 == size;
     }

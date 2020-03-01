@@ -54,8 +54,8 @@ public class SetTest {
 
     @Test
     public void testBstSet() {
-        BstSet<String> set1 = new BstSet<>();
-        BstSet<String> set2 = new BstSet<>();
+        BSTSet<String> set1 = new BSTSet<>();
+        BSTSet<String> set2 = new BSTSet<>();
         doTest(set1, set2);
     }
 
@@ -71,7 +71,7 @@ public class SetTest {
 
         String filename = "pride-and-prejudice.txt";
 
-        BstSet<String> bstSet = new BstSet<>();
+        BSTSet<String> bstSet = new BSTSet<>();
         double time1 = testSet(bstSet, filename);
         System.out.println("BST Set: " + time1 + " s");
 

@@ -2,10 +2,10 @@ package com.datastructure.Set;
 
 import com.datastructure.Tree.BST;
 
-public class BstSet<E extends Comparable<E>> implements Set<E> {
+public class BSTSet<E extends Comparable<E>> implements Set<E> {
     private BST<E> bst;
 
-    public BstSet() {
+    public BSTSet() {
         bst = new BST<>();
     }
 
