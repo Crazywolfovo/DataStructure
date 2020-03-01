@@ -58,5 +58,11 @@ public class MapTest {
         RedBlackTreeMap<String, Integer> redBlackTreeMap = new RedBlackTreeMap<>();
         double time4 = testMap(redBlackTreeMap, filename);
         System.out.println("RedBlack Tree Map: " + time4 + " s");*/
+
+        System.out.println();
+
+        HashMap<String, Integer> hashMap = new HashMap<>(131071);
+        double time5 = testMap(hashMap, filename);
+        System.out.println("Hash Map: " + time5 + " s");
     }
 }
